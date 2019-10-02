@@ -1,8 +1,10 @@
 package com.hxf.test;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import com.hxf.pojo.Pojo;
 import com.hxf.pojo.Student;
 import com.hxf.service.Student_Service_API;
 import com.hxf.service.Student_Service_Impl;
@@ -11,9 +13,20 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		like4();
+		getsee();
 
 	}
+	
+	
+	public static void getsee() {
+		Student_Service_API sc=new Student_Service_Impl();
+		
+		List<Pojo> list=sc.getsee();
+		for(Pojo stu:list) {
+			System.out.println(stu.toString());
+		}
+	}
+	
 	@org.junit.Test
 	public void like() {
 		Student_Service_API sc=new Student_Service_Impl();

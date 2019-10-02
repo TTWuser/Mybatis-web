@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.hxf.pojo.Pojo;
 import com.hxf.pojo.Student;
 
 public interface Student_Service_API {
@@ -52,4 +53,9 @@ public interface Student_Service_API {
 	
 	//多表查询
 	public void getSidandInfo(); 
+
+	
+	public List<Pojo> getsee(); 
+	
+	//
 }
