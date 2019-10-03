@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.hxf.pojo.Pojo;
+import com.hxf.pojo.StudentInfo;
 import com.hxf.pojo.Student;
 import com.hxf.service.Student_Service_API;
 import com.hxf.service.Student_Service_Impl;
@@ -21,8 +21,8 @@ public class Test {
 	public static void getsee() {
 		Student_Service_API sc=new Student_Service_Impl();
 		
-		List<Pojo> list=sc.getsee();
-		for(Pojo stu:list) {
+		List<Student> list=sc.getTwotable();
+		for(Student stu:list) {
 			System.out.println(stu.toString());
 		}
 	}

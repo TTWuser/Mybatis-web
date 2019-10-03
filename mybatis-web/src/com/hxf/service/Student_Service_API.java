@@ -5,7 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.hxf.pojo.Pojo;
+import com.hxf.pojo.StudentInfo;
 import com.hxf.pojo.Student;
 
 public interface Student_Service_API {
@@ -55,7 +55,7 @@ public interface Student_Service_API {
 	public void getSidandInfo(); 
 
 	
-	public List<Pojo> getsee(); 
+	public List<Student> getTwotable(); 
 	
 	//
 }

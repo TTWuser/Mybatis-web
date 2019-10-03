@@ -13,7 +13,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-import com.hxf.pojo.Pojo;
+import com.hxf.pojo.StudentInfo;
 import com.hxf.pojo.Student;
 
 public class Student_Service_Impl implements Student_Service_API {
@@ -207,9 +207,11 @@ public class Student_Service_Impl implements Student_Service_API {
 		
 	}
 	@Override
-	public List<Pojo> getsee() {
-		// TODO Auto-generated method stub
-		List<Pojo> list=session.selectList("com.hxf.Mapper.Student.see");
+	public List<Student> getTwotable() {
+		List<Student> list=null;
+		if(session!=null) {
+			list=session.selectList("com.hxf.Mapper.Student.selecttwotable");
+		}
 		
 		return list;
 	}

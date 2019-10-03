@@ -11,26 +11,37 @@ public class Student {
 	private Integer sqlscore;
 	private Integer springscore;
 	
+	private StudentInfo stuinfo;//学生信息
+	public StudentInfo getstuinfo() {
+		return stuinfo;
+	}
+
+	public void setstuinfo(StudentInfo stuinfo) {
+		this.stuinfo = stuinfo;
+	}
+
 	public Student() {
 		
 	}
 	
-	public Student(Integer studentid,String studentname,Integer studentclass,Integer studentscore,Integer javascore,Integer sqlscore,Integer springscore) {
-			this.studentid=studentid;
-			this.studentname=studentname;
-			this.studentclass=studentclass;
-			this.studentscore=studentscore;
-			this.javascore=javascore;
-			this.sqlscore=sqlscore;
-			this.springscore=springscore;
+	public Student(Integer studentid, String studentname, Integer studentclass, Integer studentscore, Integer javascore,
+			Integer sqlscore, Integer springscore, StudentInfo stuinfo) {
+		super();
+		this.studentid = studentid;
+		this.studentname = studentname;
+		this.studentclass = studentclass;
+		this.studentscore = studentscore;
+		this.javascore = javascore;
+		this.sqlscore = sqlscore;
+		this.springscore = springscore;
+		this.stuinfo = stuinfo;
 	}
-	
-	
+
 	@Override
 	public String toString() {
-		return "Score [studentid=" + studentid + ", studentname=" + studentname + ", studentclass=" + studentclass + ", studentscore="
-				+ studentscore + ", javascore=" + javascore + ", sqlscore=" + sqlscore + ", springscore=" + springscore
-				+ "]";
+		return "Student [studentid=" + studentid + ", studentname=" + studentname + ", studentclass=" + studentclass
+				+ ", studentscore=" + studentscore + ", javascore=" + javascore + ", sqlscore=" + sqlscore
+				+ ", springscore=" + springscore + ", stuinfo=" + stuinfo + "]";
 	}
 
 	public Integer getStudentid() {
