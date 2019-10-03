@@ -38,7 +38,7 @@ public class Servlet extends HttpServlet {
 			JsonBuilder jb=new JsonBuilder();
 			String json="";
 			try {
-				json=jb.getJsontoAll(score.getTwotable());
+				json=jb.getJsontoAll(score.selectAllStudent());
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

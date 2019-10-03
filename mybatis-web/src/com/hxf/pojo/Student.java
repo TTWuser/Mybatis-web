@@ -11,7 +11,14 @@ public class Student {
 	private Integer sqlscore;
 	private Integer springscore;
 	
-	private StudentInfo stuinfo;//学生信息
+	private StudentInfo stuinfo=null;//学生信息
+	{
+		stuinfo=new StudentInfo();
+		stuinfo.setStudentid(10000);
+		stuinfo.setStudentaddress("未知");
+		stuinfo.setStudentinfo("未知");
+	}
+		
 	public StudentInfo getstuinfo() {
 		return stuinfo;
 	}

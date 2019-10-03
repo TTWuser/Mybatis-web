@@ -28,8 +28,8 @@ public class JsonBuilder {
 			String scoreone="{\"userid\":\""+score.getStudentid()+"\",\"username\":\""+score.getStudentname()+
 					"\",\"userclass\":"+score.getStudentclass()+",\"userscore\":"+score.getStudentscore()+",\"javascore\":"+
 					score.getJavascore()+",\"sqlscore\":"+score.getSqlscore()+",\"springscore\":"+score.getSpringscore()+
-					",\"studentinfo\":"+score.getstuinfo().getStudentinfo()+",\"studentaddress\":"+score.getstuinfo().getStudentaddress()+
-					"}";
+					",\"userinfo\":\""+score.getstuinfo().getStudentinfo()+"\",\"useraddress\":\""+score.getstuinfo().getStudentaddress()+
+					"\"}";
 			//System.out.println("size::"+list.size()+" num::"+num);
 			if(num==(list.size()-1)) {
 				json=json+scoreone;
